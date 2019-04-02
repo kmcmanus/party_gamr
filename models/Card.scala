@@ -10,4 +10,4 @@ case class Card(
   onPlay: Action,
   onDraw: Action,
   onChoose: Action
-);
+)

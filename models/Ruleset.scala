@@ -12,5 +12,5 @@ case class Ruleset(
   onChoose: Action,
   scoreToWin: Amount,
   deckNames: Seq[String]
-);
+)
 

@@ -9,4 +9,4 @@ case class Deck(
   onChoose: Action,
   onLastCardDrawn: Action,
   onCannotDraw: Action
-);
+)
