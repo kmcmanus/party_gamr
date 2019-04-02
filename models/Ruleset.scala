@@ -6,11 +6,11 @@ case class Ruleset(
   description: String,
   minPlayers: Int,
   maxPlayers: Option[Int],
-  round: Action,
-  onPlay: Action,
-  onDraw: Action,
-  onChoose: Action,
   scoreToWin: Amount,
-  deckNames: Seq[String]
+  deckNames: Seq[String],
+  round: Action,
+  onPlay: Action=NoOpAction,
+  onDraw: Action=NoOpAction,
+  onChoose: Action=NoOpAction
 )
 

@@ -31,6 +31,14 @@ case class DrawsCards(
   number: Comparison,
   deck: String
 ) extends Effect
+/** The targeted player draws some cards so their hand meets a certain number
+ *  @param number The number of cards to draw their hand up to
+ *  @param deck The deck from which to draw the cards
+ */
+case class DrawsCardsUpTo(
+  number: Comparison,
+  deck: String
+) extends Effect
 /** The targeted player discards some cards of their choice
  *  @param number The number of cards to discard
  *  @param deck The deck from which the discarded cards must have been drawn from, if that is necessary
@@ -69,6 +77,7 @@ case class ChooseCards(
   number: Comparison,
   deck: Option[String]
 ) extends Effect
+
 case class ChosesNextTurn(
   qualifyingTarget: Target,
   temporaryChange: Boolean

@@ -6,7 +6,7 @@ sealed trait Action
  *  @param actions The actions
  */
 case class MultiAction(
-  actions: Seq[Action]
+  actions: Action*
 ) extends Action
 /** An action that changes the state of one or many targets
  *  @param target Who is impacted
@@ -51,7 +51,7 @@ case class ClearCardsAction(
  *  @param deck The deck whose cards are to be burnt
  */
 case class BurnCardsAction(
-  number: Amount,
+  number: Amount
   deck: String
 ) extends Action
 case object ShuffleTurnOrder extends Action

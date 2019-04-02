@@ -4,9 +4,9 @@ package models
 case class Deck(
   name: String,
   cards: Seq[Card],
-  onPlay: Action,
-  onDraw: Action,
-  onChoose: Action,
-  onLastCardDrawn: Action,
-  onCannotDraw: Action
+  onPlay: Action=NoOpAction,
+  onDraw: Action=NoOpAction,
+  onChoose: Action=NoOpAction,
+  onLastCardDrawn: Action=NoOpAction,
+  onCannotDraw: Action=NoOpAction
 )

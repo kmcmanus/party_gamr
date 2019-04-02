@@ -4,27 +4,27 @@ package models
 sealed trait Amount
 
 /** The number of players currently playing the game */
-case object NumberOfPlayers::Amount
+case object NumberOfPlayers extends Amount
 /** Representation of multiplying two amounts together
  *  @param left The left amount
  *  @param right The right amoutn
  */
-case class Multiplied::Amount(
+case class Multiplied(
   left: Amount,
   right: Amount
-)
+) extends Amount
 /** Representation of addung two amounts together
  *  @param left The left amount
  *  @param right The right amoutn
  */
-case class Added::Amount(
+case class Added(
   left: Amount,
   right: Amount
-)
+) extends Amount
 /** A Constant Amount
  *  @param n The numeric amount
  */
-case class Constant::Amount(
+case class Constant(
   n: Int
-)
+) extends Amount
 
